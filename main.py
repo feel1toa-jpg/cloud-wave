@@ -20,13 +20,13 @@ if 'logged_in' not in st.session_state:
     # st.session_state['logged_in'] = False
 
 def side_bar():
-    with st.sidebar.container():
-        selected_page = option_menu(
-            menu_title="Main Menu", 
-            options=["Main_Home"],
-            # options=["Main_Home", "Photo_Gallery"],
-            # options=["Main_Home", "Photo_Gallery", "Travel_Attractions"],
-            icons=['bi bi-house', 'bi bi-images', 'bi bi-airplane-engines'],
+  with st.sidebar.container():
+    selected_page = option_menu(
+        menu_title="Main Menu", 
+        #options=["Main_Home"],                   # 주석처리
+        options=["Main_Home", "Photo_Gallery"],   # 주석제거
+        # options=["Main_Home", "Photo_Gallery", "Travel_Attractions"],
+        icons=['bi bi-house', 'bi bi-images', 'bi bi-airplane-engines'],
             menu_icon="cast", 
             default_index=0,
             styles={
